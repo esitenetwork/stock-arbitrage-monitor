@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply font-sans bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* ヘッダー */
+  .header {
+    @apply bg-gray-900 text-white py-4 sticky top-0 z-50 shadow-md;
+  }
+  
+  .header-content {
+    @apply max-w-7xl mx-auto px-4 flex justify-between items-center;
+  }
+  
+  .logo {
+    @apply text-xl font-bold flex items-center gap-2;
+  }
+  
+  .header-info {
+    @apply flex gap-8 items-center text-sm;
+  }
+  
+  .exchange-rate {
+    @apply bg-gray-800 px-4 py-2 rounded-lg;
+  }
+  
+  .update-status {
+    @apply flex items-center gap-2;
+  }
+  
+  .status-dot {
+    @apply w-2 h-2 bg-green-500 rounded-full animate-pulse;
+  }
+  
+  /* コントロールパネル */
+  .controls {
+    @apply bg-white p-6 mx-auto max-w-7xl my-4 rounded-lg shadow-sm;
+  }
+  
+  .filter-row {
+    @apply flex gap-4 flex-wrap items-center;
+  }
+  
+  .filter-group {
+    @apply flex flex-col gap-1;
+  }
+  
+  .filter-label {
+    @apply text-xs text-gray-500 font-medium;
+  }
+  
+  .filter-select, .filter-input {
+    @apply px-4 py-2 border border-gray-300 rounded-md text-sm bg-white min-w-[150px];
+  }
+  
+  .filter-checkbox {
+    @apply flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md cursor-pointer text-sm;
+  }
+  
+  .filter-checkbox.active {
+    @apply bg-gray-900 text-white border-gray-900;
+  }
+  
+  .btn-refresh {
+    @apply ml-auto px-6 py-2 bg-green-600 text-white border-none rounded-md text-sm cursor-pointer flex items-center gap-2 hover:bg-green-700;
+  }
+  
+  /* 統計カード */
+  .stats-container {
+    @apply max-w-7xl mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+  }
+  
+  .stat-card {
+    @apply bg-white p-5 rounded-lg shadow-sm;
+  }
+  
+  .stat-title {
+    @apply text-xs text-gray-500 mb-1;
+  }
+  
+  .stat-value {
+    @apply text-2xl font-bold text-gray-900;
+  }
+  
+  .stat-change {
+    @apply text-xs mt-1;
+  }
+  
+  .positive { @apply text-green-600; }
+  .negative { @apply text-red-600; }
+  
+  /* メインテーブル */
+  .table-container {
+    @apply max-w-7xl mx-auto my-4 bg-white rounded-lg shadow-sm overflow-hidden;
+  }
+  
+  .table-header {
+    @apply p-4 border-b border-gray-200 flex justify-between items-center;
+  }
+  
+  .table-title {
+    @apply text-lg font-semibold;
+  }
+  
+  .export-btn {
+    @apply px-4 py-2 bg-indigo-600 text-white border-none rounded-md text-sm cursor-pointer hover:bg-indigo-700;
+  }
+  
+  /* テーブル本体 */
+  .data-table {
+    @apply w-full overflow-x-auto;
+  }
+  
+  .data-table table {
+    @apply w-full border-collapse;
+  }
+  
+  .data-table th {
+    @apply bg-gray-50 px-4 py-3 text-left font-semibold text-xs text-gray-700 uppercase tracking-wider border-b border-gray-200 sticky top-0 z-10;
+  }
+  
+  .data-table td {
+    @apply px-4 py-3 border-b border-gray-100 text-sm;
+  }
+  
+  .data-table tr:hover {
+    @apply bg-gray-50;
+  }
+  
+  /* 商品情報セル */
+  .product-cell {
+    @apply flex items-center gap-4 min-w-[300px];
+  }
+  
+  .product-image {
+    @apply w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden;
+  }
+  
+  .product-image img {
+    @apply w-full h-full object-cover;
+  }
+  
+  .product-info {
+    @apply flex-1;
+  }
+  
+  .product-name {
+    @apply font-semibold text-gray-900 mb-1;
+  }
+  
+  .product-sku {
+    @apply text-xs text-gray-500;
+  }
+  
+  .product-size {
+    @apply text-xs text-gray-500;
+  }
+  
+  /* 価格セル */
+  .price-cell {
+    @apply text-right font-semibold;
+  }
+  
+  .price-usd {
+    @apply text-xs text-gray-500 font-normal;
+  }
+  
+  .price-source {
+    @apply text-xs text-gray-400 mt-1;
+  }
+  
+  /* 差額・利益セル */
+  .profit-cell {
+    @apply text-right font-semibold;
+  }
+  
+  .profit-positive {
+    @apply text-green-600;
+  }
+  
+  .profit-negative {
+    @apply text-red-600;
+  }
+  
+  .profit-rate {
+    @apply text-xs font-normal mt-1;
+  }
+  
+  /* 経費明細 */
+  .expense-details {
+    @apply text-xs text-gray-500 leading-relaxed;
+  }
+  
+  /* 人気バッジ */
+  .popularity-badge {
+    @apply inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs font-semibold;
+  }
+  
+  .popularity-badge.hot {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  /* アクションボタン */
+  .action-cell {
+    @apply flex gap-2 justify-center;
+  }
+  
+  .btn-detail {
+    @apply px-3 py-1.5 bg-gray-100 text-gray-700 border border-gray-300 rounded text-xs cursor-pointer hover:bg-gray-200;
+  }
+  
+  .btn-buy {
+    @apply px-3 py-1.5 bg-green-600 text-white border-none rounded text-xs cursor-pointer hover:bg-green-700;
+  }
+  
+  /* ローディング */
+  .loading {
+    @apply text-center py-12 text-gray-500;
+  }
+  
+  .spinner {
+    @apply inline-block w-8 h-8 border-3 border-gray-100 border-t-gray-900 rounded-full animate-spin mb-4;
+  }
+  
+  /* レスポンシブ */
+  @media (max-width: 1200px) {
+    .filter-row {
+      @apply flex-col items-stretch;
+    }
+    
+    .btn-refresh {
+      @apply ml-0 mt-4;
+    }
+  }
+}

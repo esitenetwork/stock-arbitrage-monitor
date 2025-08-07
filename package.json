@@ -1,0 +1,44 @@
+{
+  "name": "stockx-arbitrage-monitor",
+  "version": "1.0.0",
+  "description": "StockX price comparison and arbitrage monitoring tool",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "db:init": "node scripts/init-db.js",
+    "scrape": "node scripts/scrape.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "puppeteer": "^21.7.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "stockx",
+    "arbitrage",
+    "price-comparison",
+    "sneakers",
+    "trading"
+  ],
+  "author": "",
+  "license": "MIT"
+}
