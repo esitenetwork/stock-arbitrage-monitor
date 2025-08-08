@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
+    "export": "next build",
     "db:init": "node scripts/init-db.js",
     "scrape": "node scripts/scrape.js"
   },
