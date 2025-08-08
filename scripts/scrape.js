@@ -25,7 +25,9 @@ const TARGET_PRODUCTS = [
 ];
 
 async function main() {
+  const startTime = new Date();
   console.log('🚀 StockX Arbitrage Monitor スクレイピング開始...');
+  console.log(`📅 開始時刻: ${startTime.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}`);
   
   // Supabase接続テスト
   const isConnected = await testConnection();
@@ -113,7 +115,12 @@ async function main() {
     console.log('\n🧹 古い価格履歴を削除中...');
     await cleanupOldPriceHistory();
     
+    const endTime = new Date();
+    const duration = endTime - startTime;
+    
     console.log(`\n✅ スクレイピング完了!`);
+    console.log(`📅 終了時刻: ${endTime.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}`);
+    console.log(`⏱️ 実行時間: ${Math.floor(duration / 1000)}秒`);
     console.log(`成功: ${successCount}件, エラー: ${errorCount}件`);
     
   } catch (error) {
