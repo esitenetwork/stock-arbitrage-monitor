@@ -7,9 +7,18 @@ export default function ProductTable({ filters }) {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [sortBy, setSortBy] = useState('popularity')
+  const [lastUpdate, setLastUpdate] = useState(null)
 
   useEffect(() => {
     fetchProducts()
+    
+    // 30秒ごとに自動更新
+    const interval = setInterval(() => {
+      console.log('自動更新中...')
+      fetchProducts()
+    }, 30000)
+    
+    return () => clearInterval(interval)
   }, [filters, sortBy])
 
   const fetchProducts = async () => {
@@ -24,6 +33,7 @@ export default function ProductTable({ filters }) {
       const response = await fetch(`/api/products?${params}`)
       const data = await response.json()
       setProducts(data)
+      setLastUpdate(new Date())
     } catch (error) {
       console.error('商品データ取得エラー:', error)
     } finally {
@@ -95,9 +105,16 @@ export default function ProductTable({ filters }) {
     <div className="table-container">
       <div className="table-header">
         <h2 className="table-title">価格比較リスト</h2>
-        <button className="export-btn" onClick={handleExport}>
-          📥 CSVエクスポート
-        </button>
+        <div className="table-controls">
+          {lastUpdate && (
+            <div className="last-update">
+              最終更新: {lastUpdate.toLocaleString('ja-JP')}
+            </div>
+          )}
+          <button className="export-btn" onClick={handleExport}>
+            CSVエクスポート
+          </button>
+        </div>
       </div>
       
       <div className="data-table">

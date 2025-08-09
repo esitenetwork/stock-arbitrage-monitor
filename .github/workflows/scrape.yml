@@ -2,8 +2,8 @@ name: StockX Arbitrage Scraping
 
 on:
   schedule:
-    # 30分ごとに実行
-    - cron: '*/30 * * * *'
+    # 2時間ごとに実行
+    - cron: '0 */2 * * *'
   workflow_dispatch: # 手動実行も可能
 
 jobs:

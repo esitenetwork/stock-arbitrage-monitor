@@ -112,6 +112,14 @@
     @apply text-lg font-semibold;
   }
   
+  .table-controls {
+    @apply flex items-center gap-4;
+  }
+  
+  .last-update {
+    @apply text-sm text-gray-500;
+  }
+  
   .export-btn {
     @apply px-4 py-2 bg-indigo-600 text-white border-none rounded-md text-sm cursor-pointer hover:bg-indigo-700;
   }
