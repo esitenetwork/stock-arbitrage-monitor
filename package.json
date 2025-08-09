@@ -14,19 +14,25 @@
     "scrape:top-models": "node scripts/scrape-top-models.js",
     "scrape:manual": "node scripts/scrape-top-models-manual.js",
     "scrape:fixed": "node scripts/scrape-top-models-fixed.js",
+    "remote-scrape": "node scripts/remote-scrape.js",
+    "playwright-scrape": "node scripts/playwright-scrape.js",
     "test:press-hold": "node scripts/test-press-hold.js",
     "check:db": "node scripts/check-database.js",
     "test:single": "node scripts/test-single-product.js",
     "test:top3": "node scripts/test-top-3-products.js",
     "debug:tiles": "node scripts/debug-product-tiles.js",
-    "manual:press-hold": "node scripts/manual-press-hold.js"
+    "manual:press-hold": "node scripts/manual-press-hold.js",
+    "auto:press-hold": "node scripts/auto-press-hold.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
     "axios": "^1.11.0",
     "dotenv": "^16.3.1",
     "next": "^14.0.4",
+    "playwright": "^1.54.2",
     "puppeteer": "^21.11.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

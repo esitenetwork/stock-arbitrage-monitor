@@ -15,122 +15,39 @@ const { calculateProfit } = require('../lib/profitCalculation');
 let TARGET_PRODUCTS = [];
 
 async function scrapeTopModels() {
-  const puppeteer = require('puppeteer');
+  const scraper = new StockXScraper();
   
-  const browser = await puppeteer.launch({
-    headless: false,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-accelerated-2d-canvas',
-      '--no-first-run',
-      '--no-zygote',
-      '--disable-gpu'
-    ]
-  });
-
   try {
-    const page = await browser.newPage();
+    console.log('StockXスクレイパーを初期化中...');
+    await scraper.init();
+    console.log('StockXスクレイパー初期化完了');
     
-    // ボット検出回避
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await page.setViewport({ width: 1920, height: 1080 });
-    await page.setExtraHTTPHeaders({
-      'Accept-Language': 'en-US,en;q=0.9',
-      'Accept-Encoding': 'gzip, deflate, br',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
-    });
-
-    // ボット検出回避のためのスクリプト
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, 'webdriver', {
-        get: () => undefined,
-      });
-      Object.defineProperty(navigator, 'plugins', {
-        get: () => [1, 2, 3, 4, 5],
-      });
-      Object.defineProperty(navigator, 'languages', {
-        get: () => ['en-US', 'en'],
-      });
-      Object.defineProperty(window, 'chrome', {
-        get: () => ({
-          runtime: {},
-        }),
-      });
-      const originalQuery = window.navigator.permissions.query;
-      window.navigator.permissions.query = (parameters) => (
-        parameters.name === 'notifications' ?
-          Promise.resolve({ state: Notification.permission }) :
-          originalQuery(parameters)
-      );
-    });
-
     console.log('StockX Top Modelsページにアクセス中...');
-    await page.goto('https://stockx.com/category/sneakers?sort=most-active', {
-      waitUntil: 'networkidle2',
-      timeout: 30000
-    });
-
-    console.log('ページ読み込み完了。15秒待機...');
-    await page.waitForTimeout(15000);
-
-    // スクロールしてコンテンツを読み込み
-    console.log('ページをスクロール中...');
-    await page.evaluate(() => {
-      window.scrollTo(0, document.body.scrollHeight / 2);
-    });
-    await page.waitForTimeout(3000);
-
-    // 商品データを抽出
-    console.log('商品データを抽出中...');
-    const products = await page.evaluate(() => {
-      const productElements = document.querySelectorAll('[data-testid="ProductTile"]');
-      const results = [];
-
-      productElements.forEach((element) => {
-        try {
-          // 商品タイトル
-          const titleElement = element.querySelector('[data-testid="product-tile-title"]');
-          const title = titleElement ? titleElement.textContent.trim() : '';
-
-          // 価格
-          const priceElement = element.querySelector('[data-testid="product-tile-lowest-ask-amount"]');
-          const price = priceElement ? priceElement.textContent.trim() : '';
-
-          // 商品リンク
-          const linkElement = element.querySelector('[data-testid="productTile-ProductSwitcherLink"]');
-          const link = linkElement ? linkElement.href : '';
-
-          if (title && link) {
-            // SKUをリンクから抽出
-            const sku = link.split('/').pop() || '';
-            
-            results.push({
-              name: title,
-              sku: sku,
-              price: price,
-              link: link
-            });
-          }
-        } catch (error) {
-          console.error('商品要素の処理エラー:', error);
-        }
+    const products = await scraper.scrapeStockXTopModels();
+    
+    if (products.length > 0) {
+      console.log('\n=== 取得した商品 ===');
+      products.slice(0, 5).forEach((product, index) => {
+        console.log(`${index + 1}. ${product.name}`);
+        console.log(`   SKU: ${product.sku}`);
+        console.log(`   価格: ${product.price}`);
+        console.log(`   リンク: ${product.url}`);
+        console.log('');
       });
+    } else {
+      console.log('商品を取得できませんでした');
+    }
 
-      return results;
-    });
-
-    console.log(`✅ ${products.length}個の商品を取得しました`);
     return products;
 
   } catch (error) {
-    console.error('❌ Top Models取得エラー:', error);
+    console.error('スクレイピングエラー:', error);
+    console.error('エラーの詳細:', error.stack);
     return [];
   } finally {
-    await browser.close();
+    console.log('ブラウザを閉じています...');
+    await scraper.close();
+    console.log('ブラウザを閉じました');
   }
 }
 
@@ -217,9 +134,9 @@ async function main() {
   
   console.log(`✓ ${TARGET_PRODUCTS.length}件の商品を処理対象に設定`);
   
-  // 新商品をデータベースに保存
+  // 新商品をデータベースに保存（最初の3件のみテスト）
   console.log('💾 新商品をデータベースに保存中...');
-  for (const product of TARGET_PRODUCTS.slice(0, 10)) {
+  for (const product of TARGET_PRODUCTS.slice(0, 3)) {
     await saveProductToDatabase(product);
   }
   
@@ -228,8 +145,9 @@ async function main() {
   const japanScraper = new JapanSiteScraper();
   
   try {
+    console.log('StockXスクレイパーを初期化中...');
     await stockxScraper.init();
-    console.log('✓ StockXスクレイパー初期化完了');
+    console.log('StockXスクレイパー初期化完了');
     
     let successCount = 0;
     let errorCount = 0;
@@ -247,8 +165,8 @@ async function main() {
     
     console.log(`✓ データベースから${dbProducts.length}件の商品を取得`);
     
-    // 各商品をスクレイピング（最大10件まで）
-    const productsToProcess = TARGET_PRODUCTS.slice(0, 10);
+    // 各商品をスクレイピング（最初の3件のみテスト）
+    const productsToProcess = TARGET_PRODUCTS.slice(0, 3);
     
     for (const product of productsToProcess) {
       try {
@@ -331,9 +249,12 @@ async function main() {
     console.log(`成功: ${successCount}件, エラー: ${errorCount}件`);
     
   } catch (error) {
-    console.error('❌ スクレイピング中にエラーが発生しました:', error);
+    console.error('スクレイピング中にエラーが発生しました:', error);
+    console.error('エラーの詳細:', error.stack);
   } finally {
+    console.log('ブラウザを閉じています...');
     await stockxScraper.close();
+    console.log('ブラウザを閉じました');
   }
 }
 
