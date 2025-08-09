@@ -1,0 +1,86 @@
+﻿2025-08-08T23:10:41.6967932Z ##[group]Run npm run build
+2025-08-08T23:10:41.6968208Z [36;1mnpm run build[0m
+2025-08-08T23:10:41.7009759Z shell: /usr/bin/bash -e {0}
+2025-08-08T23:10:41.7010003Z env:
+2025-08-08T23:10:41.7010530Z   NEXT_PUBLIC_SUPABASE_URL: ***
+2025-08-08T23:10:41.7012015Z   SUPABASE_SERVICE_ROLE_KEY: ***
+2025-08-08T23:10:41.7012260Z ##[endgroup]
+2025-08-08T23:10:41.8347136Z 
+2025-08-08T23:10:41.8347718Z > stockx-arbitrage-monitor@1.0.0 build
+2025-08-08T23:10:41.8348299Z > next build
+2025-08-08T23:10:41.8348556Z 
+2025-08-08T23:10:42.3690456Z  ⚠ Invalid next.config.js options detected: 
+2025-08-08T23:10:42.3694168Z  ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+2025-08-08T23:10:42.3695231Z  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2025-08-08T23:10:42.3720966Z ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2025-08-08T23:10:42.3781830Z Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2025-08-08T23:10:42.3785577Z This information is used to shape Next.js' roadmap and prioritize features.
+2025-08-08T23:10:42.3787087Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-08-08T23:10:42.3788134Z https://nextjs.org/telemetry
+2025-08-08T23:10:42.3788427Z 
+2025-08-08T23:10:42.4319826Z   ▲ Next.js 14.2.31
+2025-08-08T23:10:42.4333598Z 
+2025-08-08T23:10:42.4835740Z    Creating an optimized production build ...
+2025-08-08T23:10:50.4698388Z <w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css': No serializer registered for PostCSSSyntaxError
+2025-08-08T23:10:50.4703689Z <w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+2025-08-08T23:10:50.5979821Z Failed to compile.
+2025-08-08T23:10:50.5980264Z 
+2025-08-08T23:10:50.5982444Z ./app/globals.css:146:5
+2025-08-08T23:10:50.5984501Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive.
+2025-08-08T23:10:50.5986503Z 
+2025-08-08T23:10:50.5986901Z  [90m 144 | [39m  
+2025-08-08T23:10:50.5987458Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.5988372Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.5989027Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.5989327Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.5989564Z  [90m 148 | [39m
+2025-08-08T23:10:50.5989681Z 
+2025-08-08T23:10:50.5989774Z ./app/globals.css
+2025-08-08T23:10:50.5990760Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive. (146:5)
+2025-08-08T23:10:50.5991476Z 
+2025-08-08T23:10:50.5991588Z  [90m 144 | [39m  
+2025-08-08T23:10:50.5991912Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.5992754Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.5993444Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.5993930Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.5994461Z  [90m 148 | [39m  
+2025-08-08T23:10:50.5994580Z 
+2025-08-08T23:10:50.5995165Z     at tryRunOrWebpackError (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:312989)
+2025-08-08T23:10:50.5996565Z     at __webpack_require_module__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+2025-08-08T23:10:50.5997708Z     at __nested_webpack_require_153728__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+2025-08-08T23:10:50.5998765Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454
+2025-08-08T23:10:50.5999766Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2025-08-08T23:10:50.6000767Z     at done (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+2025-08-08T23:10:50.6001935Z     at Hook.eval [as callAsync] (eval at create (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:28858), <anonymous>:15:1)
+2025-08-08T23:10:50.6003420Z     at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:26012)
+2025-08-08T23:10:50.6005871Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130328
+2025-08-08T23:10:50.6007562Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+2025-08-08T23:10:50.6008675Z -- inner error --
+2025-08-08T23:10:50.6010476Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive. (146:5)
+2025-08-08T23:10:50.6011773Z 
+2025-08-08T23:10:50.6012059Z  [90m 144 | [39m  
+2025-08-08T23:10:50.6012619Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.6014197Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.6015296Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.6016021Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.6016441Z  [90m 148 | [39m  
+2025-08-08T23:10:50.6016641Z 
+2025-08-08T23:10:50.6019907Z     at Object.<anonymous> (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css:1:7)
+2025-08-08T23:10:50.6023776Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:922493
+2025-08-08T23:10:50.6026226Z     at Hook.eval [as call] (eval at create (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)
+2025-08-08T23:10:50.6028528Z     at Hook.CALL_DELEGATE [as _call] (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:25906)
+2025-08-08T23:10:50.6030465Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131198
+2025-08-08T23:10:50.6032495Z     at tryRunOrWebpackError (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:312943)
+2025-08-08T23:10:50.6034867Z     at __webpack_require_module__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+2025-08-08T23:10:50.6037248Z     at __nested_webpack_require_153728__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+2025-08-08T23:10:50.6039183Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454
+2025-08-08T23:10:50.6041011Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2025-08-08T23:10:50.6041989Z 
+2025-08-08T23:10:50.6045666Z Generated code for /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css
+2025-08-08T23:10:50.6048525Z 
+2025-08-08T23:10:50.6048769Z Import trace for requested module:
+2025-08-08T23:10:50.6049208Z ./app/globals.css
+2025-08-08T23:10:50.6049624Z 
+2025-08-08T23:10:50.6088098Z 
+2025-08-08T23:10:50.6089156Z > Build failed because of webpack errors
+2025-08-08T23:10:50.6246417Z ##[error]Process completed with exit code 1.

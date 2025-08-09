@@ -1,0 +1,69 @@
+﻿2025-08-08T23:05:42.4656065Z ##[group]Run actions/checkout@v4
+2025-08-08T23:05:42.4656944Z with:
+2025-08-08T23:05:42.4657421Z   repository: esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.4658147Z   token: ***
+2025-08-08T23:05:42.4658551Z   ssh-strict: true
+2025-08-08T23:05:42.4658958Z   ssh-user: git
+2025-08-08T23:05:42.4659378Z   persist-credentials: true
+2025-08-08T23:05:42.4659839Z   clean: true
+2025-08-08T23:05:42.4660253Z   sparse-checkout-cone-mode: true
+2025-08-08T23:05:42.4660735Z   fetch-depth: 1
+2025-08-08T23:05:42.4661138Z   fetch-tags: false
+2025-08-08T23:05:42.4661555Z   show-progress: true
+2025-08-08T23:05:42.4661986Z   lfs: false
+2025-08-08T23:05:42.4662366Z   submodules: false
+2025-08-08T23:05:42.4662784Z   set-safe-directory: true
+2025-08-08T23:05:42.4663418Z ##[endgroup]
+2025-08-08T23:05:42.5706474Z Syncing repository: esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.5708425Z ##[group]Getting Git version info
+2025-08-08T23:05:42.5709422Z Working directory is '/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor'
+2025-08-08T23:05:42.5710608Z [command]/usr/bin/git version
+2025-08-08T23:05:42.5737272Z git version 2.50.1
+2025-08-08T23:05:42.5762566Z ##[endgroup]
+2025-08-08T23:05:42.5782215Z Temporarily overriding HOME='/home/runner/work/_temp/83f01e0d-39e2-460c-ada6-7ed595815db5' before making global git config changes
+2025-08-08T23:05:42.5784342Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-08T23:05:42.5787227Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor
+2025-08-08T23:05:42.5820272Z Deleting the contents of '/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor'
+2025-08-08T23:05:42.5823599Z ##[group]Initializing the repository
+2025-08-08T23:05:42.5827746Z [command]/usr/bin/git init /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor
+2025-08-08T23:05:42.5879508Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-08T23:05:42.5881204Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-08T23:05:42.5882463Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-08T23:05:42.5883433Z hint:
+2025-08-08T23:05:42.5884282Z hint: 	git config --global init.defaultBranch <name>
+2025-08-08T23:05:42.5885716Z hint:
+2025-08-08T23:05:42.5886787Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-08T23:05:42.5888437Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-08T23:05:42.5889752Z hint:
+2025-08-08T23:05:42.5890420Z hint: 	git branch -m <name>
+2025-08-08T23:05:42.5891189Z hint:
+2025-08-08T23:05:42.5892201Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-08T23:05:42.5894339Z Initialized empty Git repository in /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/.git/
+2025-08-08T23:05:42.5897808Z [command]/usr/bin/git remote add origin https://github.com/esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.5927013Z ##[endgroup]
+2025-08-08T23:05:42.5928244Z ##[group]Disabling automatic garbage collection
+2025-08-08T23:05:42.5931738Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-08T23:05:42.5959943Z ##[endgroup]
+2025-08-08T23:05:42.5961192Z ##[group]Setting up auth
+2025-08-08T23:05:42.5967218Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-08T23:05:42.5997089Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-08T23:05:42.6248185Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-08T23:05:42.6277902Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-08T23:05:42.6493566Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-08T23:05:42.6527637Z ##[endgroup]
+2025-08-08T23:05:42.6528906Z ##[group]Fetching the repository
+2025-08-08T23:05:42.6545228Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +584e1284bfbee027fa1d0fe7bf778752feef5780:refs/remotes/origin/main
+2025-08-08T23:05:42.8947850Z From https://github.com/esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.8948982Z  * [new ref]         584e1284bfbee027fa1d0fe7bf778752feef5780 -> origin/main
+2025-08-08T23:05:42.8976910Z ##[endgroup]
+2025-08-08T23:05:42.8978238Z ##[group]Determining the checkout info
+2025-08-08T23:05:42.8979788Z ##[endgroup]
+2025-08-08T23:05:42.8984868Z [command]/usr/bin/git sparse-checkout disable
+2025-08-08T23:05:42.9024333Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-08T23:05:42.9054125Z ##[group]Checking out the ref
+2025-08-08T23:05:42.9056772Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-08-08T23:05:42.9131427Z Switched to a new branch 'main'
+2025-08-08T23:05:42.9134569Z branch 'main' set up to track 'origin/main'.
+2025-08-08T23:05:42.9140196Z ##[endgroup]
+2025-08-08T23:05:42.9170925Z [command]/usr/bin/git log -1 --format=%H
+2025-08-08T23:05:42.9191884Z 584e1284bfbee027fa1d0fe7bf778752feef5780

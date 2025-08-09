@@ -1,0 +1,247 @@
+﻿2025-08-08T23:05:41.4488932Z Current runner version: '2.327.1'
+2025-08-08T23:05:41.4521698Z ##[group]Runner Image Provisioner
+2025-08-08T23:05:41.4523022Z Hosted Compute Agent
+2025-08-08T23:05:41.4523984Z Version: 20250711.363
+2025-08-08T23:05:41.4525117Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-08-08T23:05:41.4526587Z Build Date: 2025-07-11T20:04:25Z
+2025-08-08T23:05:41.4527574Z ##[endgroup]
+2025-08-08T23:05:41.4528533Z ##[group]Operating System
+2025-08-08T23:05:41.4529497Z Ubuntu
+2025-08-08T23:05:41.4530304Z 24.04.2
+2025-08-08T23:05:41.4531218Z LTS
+2025-08-08T23:05:41.4532127Z ##[endgroup]
+2025-08-08T23:05:41.4533133Z ##[group]Runner Image
+2025-08-08T23:05:41.4534259Z Image: ubuntu-24.04
+2025-08-08T23:05:41.4535171Z Version: 20250804.2.0
+2025-08-08T23:05:41.4537174Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250804.2/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-08T23:05:41.4540098Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250804.2
+2025-08-08T23:05:41.4541965Z ##[endgroup]
+2025-08-08T23:05:41.4543791Z ##[group]GITHUB_TOKEN Permissions
+2025-08-08T23:05:41.4546531Z Contents: read
+2025-08-08T23:05:41.4547663Z Metadata: read
+2025-08-08T23:05:41.4548515Z Packages: read
+2025-08-08T23:05:41.4549350Z ##[endgroup]
+2025-08-08T23:05:41.4552397Z Secret source: Actions
+2025-08-08T23:05:41.4553546Z Prepare workflow directory
+2025-08-08T23:05:41.4982374Z Prepare all required actions
+2025-08-08T23:05:41.5037873Z Getting action download info
+2025-08-08T23:05:41.8305019Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-08-08T23:05:41.8306302Z Version: 4.2.2
+2025-08-08T23:05:41.8307302Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-08-08T23:05:41.8308864Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-08-08T23:05:41.8309650Z ##[endgroup]
+2025-08-08T23:05:41.9007000Z ##[group]Download immutable action package 'actions/setup-node@v4'
+2025-08-08T23:05:41.9007788Z Version: 4.4.0
+2025-08-08T23:05:41.9008561Z Digest: sha256:9427cefe82346e992fb5b949e3569b39d537ae41aa3086483b14eceebfc16bc1
+2025-08-08T23:05:41.9009618Z Source commit SHA: 49933ea5288caeca8642d1e84afbd3f7d6820020
+2025-08-08T23:05:41.9010319Z ##[endgroup]
+2025-08-08T23:05:41.9880020Z Download action repository 'peaceiris/actions-gh-pages@v3' (SHA:373f7f263a76c20808c831209c920827a82a2847)
+2025-08-08T23:05:42.4005724Z Complete job name: build-and-deploy
+2025-08-08T23:05:42.4656091Z ##[group]Run actions/checkout@v4
+2025-08-08T23:05:42.4656954Z with:
+2025-08-08T23:05:42.4657426Z   repository: esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.4658151Z   token: ***
+2025-08-08T23:05:42.4658554Z   ssh-strict: true
+2025-08-08T23:05:42.4658961Z   ssh-user: git
+2025-08-08T23:05:42.4659382Z   persist-credentials: true
+2025-08-08T23:05:42.4659841Z   clean: true
+2025-08-08T23:05:42.4660262Z   sparse-checkout-cone-mode: true
+2025-08-08T23:05:42.4660738Z   fetch-depth: 1
+2025-08-08T23:05:42.4661141Z   fetch-tags: false
+2025-08-08T23:05:42.4661557Z   show-progress: true
+2025-08-08T23:05:42.4661989Z   lfs: false
+2025-08-08T23:05:42.4662368Z   submodules: false
+2025-08-08T23:05:42.4662787Z   set-safe-directory: true
+2025-08-08T23:05:42.4663425Z ##[endgroup]
+2025-08-08T23:05:42.5706521Z Syncing repository: esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.5708443Z ##[group]Getting Git version info
+2025-08-08T23:05:42.5709495Z Working directory is '/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor'
+2025-08-08T23:05:42.5710612Z [command]/usr/bin/git version
+2025-08-08T23:05:42.5737294Z git version 2.50.1
+2025-08-08T23:05:42.5762587Z ##[endgroup]
+2025-08-08T23:05:42.5782240Z Temporarily overriding HOME='/home/runner/work/_temp/83f01e0d-39e2-460c-ada6-7ed595815db5' before making global git config changes
+2025-08-08T23:05:42.5784348Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-08T23:05:42.5787242Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor
+2025-08-08T23:05:42.5820297Z Deleting the contents of '/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor'
+2025-08-08T23:05:42.5823614Z ##[group]Initializing the repository
+2025-08-08T23:05:42.5827771Z [command]/usr/bin/git init /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor
+2025-08-08T23:05:42.5879554Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-08T23:05:42.5881227Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-08T23:05:42.5882472Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-08T23:05:42.5883448Z hint:
+2025-08-08T23:05:42.5884298Z hint: 	git config --global init.defaultBranch <name>
+2025-08-08T23:05:42.5885740Z hint:
+2025-08-08T23:05:42.5886804Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-08T23:05:42.5888461Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-08T23:05:42.5889767Z hint:
+2025-08-08T23:05:42.5890428Z hint: 	git branch -m <name>
+2025-08-08T23:05:42.5891195Z hint:
+2025-08-08T23:05:42.5892212Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-08T23:05:42.5894364Z Initialized empty Git repository in /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/.git/
+2025-08-08T23:05:42.5897847Z [command]/usr/bin/git remote add origin https://github.com/esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.5927036Z ##[endgroup]
+2025-08-08T23:05:42.5928262Z ##[group]Disabling automatic garbage collection
+2025-08-08T23:05:42.5931764Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-08T23:05:42.5959967Z ##[endgroup]
+2025-08-08T23:05:42.5961211Z ##[group]Setting up auth
+2025-08-08T23:05:42.5967246Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-08T23:05:42.5997119Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-08T23:05:42.6248213Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-08T23:05:42.6278285Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-08T23:05:42.6493607Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-08T23:05:42.6527663Z ##[endgroup]
+2025-08-08T23:05:42.6528924Z ##[group]Fetching the repository
+2025-08-08T23:05:42.6545261Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +584e1284bfbee027fa1d0fe7bf778752feef5780:refs/remotes/origin/main
+2025-08-08T23:05:42.8947920Z From https://github.com/esitenetwork/stock-arbitrage-monitor
+2025-08-08T23:05:42.8948994Z  * [new ref]         584e1284bfbee027fa1d0fe7bf778752feef5780 -> origin/main
+2025-08-08T23:05:42.8976943Z ##[endgroup]
+2025-08-08T23:05:42.8978271Z ##[group]Determining the checkout info
+2025-08-08T23:05:42.8979809Z ##[endgroup]
+2025-08-08T23:05:42.8984899Z [command]/usr/bin/git sparse-checkout disable
+2025-08-08T23:05:42.9024365Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-08T23:05:42.9054203Z ##[group]Checking out the ref
+2025-08-08T23:05:42.9056796Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-08-08T23:05:42.9131466Z Switched to a new branch 'main'
+2025-08-08T23:05:42.9134600Z branch 'main' set up to track 'origin/main'.
+2025-08-08T23:05:42.9140217Z ##[endgroup]
+2025-08-08T23:05:42.9170954Z [command]/usr/bin/git log -1 --format=%H
+2025-08-08T23:05:42.9191921Z 584e1284bfbee027fa1d0fe7bf778752feef5780
+2025-08-08T23:05:42.9440137Z ##[group]Run actions/setup-node@v4
+2025-08-08T23:05:42.9440792Z with:
+2025-08-08T23:05:42.9441182Z   node-version: 18
+2025-08-08T23:05:42.9441915Z   cache: npm
+2025-08-08T23:05:42.9442537Z   always-auth: false
+2025-08-08T23:05:42.9443158Z   check-latest: false
+2025-08-08T23:05:42.9443889Z   token: ***
+2025-08-08T23:05:42.9444327Z ##[endgroup]
+2025-08-08T23:05:43.1188762Z Found in cache @ /opt/hostedtoolcache/node/18.20.8/x64
+2025-08-08T23:05:43.1195779Z ##[group]Environment details
+2025-08-08T23:05:44.9580905Z node: v18.20.8
+2025-08-08T23:05:44.9581517Z npm: 10.8.2
+2025-08-08T23:05:44.9581949Z yarn: 1.22.22
+2025-08-08T23:05:44.9585162Z ##[endgroup]
+2025-08-08T23:05:44.9605348Z [command]/opt/hostedtoolcache/node/18.20.8/x64/bin/npm config get cache
+2025-08-08T23:05:45.2478216Z /home/runner/.npm
+2025-08-08T23:05:45.4219677Z npm cache is not found
+2025-08-08T23:05:45.4332398Z ##[group]Run npm ci
+2025-08-08T23:05:45.4332689Z [36;1mnpm ci[0m
+2025-08-08T23:05:45.4404761Z shell: /usr/bin/bash -e {0}
+2025-08-08T23:05:45.4405033Z ##[endgroup]
+2025-08-08T23:05:48.9671929Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-08-08T23:05:49.5433361Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-08-08T23:05:49.7108618Z npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+2025-08-08T23:05:50.3837995Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2025-08-08T23:05:50.4569646Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2025-08-08T23:05:50.8304294Z npm warn deprecated puppeteer@21.11.0: < 24.9.0 is no longer supported
+2025-08-08T23:05:52.2039352Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-08-08T23:10:41.6618437Z 
+2025-08-08T23:10:41.6619159Z added 479 packages, and audited 480 packages in 5m
+2025-08-08T23:10:41.6619615Z 
+2025-08-08T23:10:41.6619866Z 156 packages are looking for funding
+2025-08-08T23:10:41.6620344Z   run `npm fund` for details
+2025-08-08T23:10:41.6818606Z 
+2025-08-08T23:10:41.6819013Z 5 high severity vulnerabilities
+2025-08-08T23:10:41.6819357Z 
+2025-08-08T23:10:41.6819738Z To address all issues (including breaking changes), run:
+2025-08-08T23:10:41.6820303Z   npm audit fix --force
+2025-08-08T23:10:41.6820543Z 
+2025-08-08T23:10:41.6820743Z Run `npm audit` for details.
+2025-08-08T23:10:41.6967942Z ##[group]Run npm run build
+2025-08-08T23:10:41.6968211Z [36;1mnpm run build[0m
+2025-08-08T23:10:41.7009771Z shell: /usr/bin/bash -e {0}
+2025-08-08T23:10:41.7010006Z env:
+2025-08-08T23:10:41.7010533Z   NEXT_PUBLIC_SUPABASE_URL: ***
+2025-08-08T23:10:41.7012018Z   SUPABASE_SERVICE_ROLE_KEY: ***
+2025-08-08T23:10:41.7012263Z ##[endgroup]
+2025-08-08T23:10:41.8347167Z 
+2025-08-08T23:10:41.8347729Z > stockx-arbitrage-monitor@1.0.0 build
+2025-08-08T23:10:41.8348305Z > next build
+2025-08-08T23:10:41.8348563Z 
+2025-08-08T23:10:42.3690492Z  ⚠ Invalid next.config.js options detected: 
+2025-08-08T23:10:42.3694180Z  ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+2025-08-08T23:10:42.3695237Z  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2025-08-08T23:10:42.3720983Z ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2025-08-08T23:10:42.3781932Z Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2025-08-08T23:10:42.3785591Z This information is used to shape Next.js' roadmap and prioritize features.
+2025-08-08T23:10:42.3787101Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-08-08T23:10:42.3788139Z https://nextjs.org/telemetry
+2025-08-08T23:10:42.3788432Z 
+2025-08-08T23:10:42.4319862Z   ▲ Next.js 14.2.31
+2025-08-08T23:10:42.4333614Z 
+2025-08-08T23:10:42.4835755Z    Creating an optimized production build ...
+2025-08-08T23:10:50.4698473Z <w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css': No serializer registered for PostCSSSyntaxError
+2025-08-08T23:10:50.4703695Z <w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+2025-08-08T23:10:50.5979857Z Failed to compile.
+2025-08-08T23:10:50.5980270Z 
+2025-08-08T23:10:50.5982457Z ./app/globals.css:146:5
+2025-08-08T23:10:50.5984510Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive.
+2025-08-08T23:10:50.5986510Z 
+2025-08-08T23:10:50.5986905Z  [90m 144 | [39m  
+2025-08-08T23:10:50.5987462Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.5988391Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.5989030Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.5989329Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.5989567Z  [90m 148 | [39m
+2025-08-08T23:10:50.5989684Z 
+2025-08-08T23:10:50.5989777Z ./app/globals.css
+2025-08-08T23:10:50.5990763Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive. (146:5)
+2025-08-08T23:10:50.5991478Z 
+2025-08-08T23:10:50.5991591Z  [90m 144 | [39m  
+2025-08-08T23:10:50.5991915Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.5992757Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.5993448Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.5994189Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.5994464Z  [90m 148 | [39m  
+2025-08-08T23:10:50.5994582Z 
+2025-08-08T23:10:50.5995168Z     at tryRunOrWebpackError (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:312989)
+2025-08-08T23:10:50.5996576Z     at __webpack_require_module__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+2025-08-08T23:10:50.5997711Z     at __nested_webpack_require_153728__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+2025-08-08T23:10:50.5998768Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454
+2025-08-08T23:10:50.5999769Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2025-08-08T23:10:50.6000773Z     at done (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+2025-08-08T23:10:50.6001938Z     at Hook.eval [as callAsync] (eval at create (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:28858), <anonymous>:15:1)
+2025-08-08T23:10:50.6003426Z     at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:26012)
+2025-08-08T23:10:50.6005879Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130328
+2025-08-08T23:10:50.6007567Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+2025-08-08T23:10:50.6008680Z -- inner error --
+2025-08-08T23:10:50.6010490Z Syntax error: /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css The `w-15` class does not exist. If `w-15` is a custom class, make sure it is defined within a `@layer` directive. (146:5)
+2025-08-08T23:10:50.6011779Z 
+2025-08-08T23:10:50.6012063Z  [90m 144 | [39m  
+2025-08-08T23:10:50.6012624Z  [90m 145 | [39m  [33m.product-image[39m [33m{[39m
+2025-08-08T23:10:50.6014204Z [1m[31m>[39m[22m[90m 146 | [39m    [36m@apply[39m w-15 h-15 bg-gray-100 rounded-md flex items-center justify-center flex-shrink-0 overflow-hidden[33m;[39m
+2025-08-08T23:10:50.6015308Z  [90m     | [39m    [1m[31m^[39m[22m
+2025-08-08T23:10:50.6016028Z  [90m 147 | [39m  [33m}[39m
+2025-08-08T23:10:50.6016445Z  [90m 148 | [39m  
+2025-08-08T23:10:50.6016645Z 
+2025-08-08T23:10:50.6019921Z     at Object.<anonymous> (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css:1:7)
+2025-08-08T23:10:50.6023790Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:922493
+2025-08-08T23:10:50.6026240Z     at Hook.eval [as call] (eval at create (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)
+2025-08-08T23:10:50.6028539Z     at Hook.CALL_DELEGATE [as _call] (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:13:25906)
+2025-08-08T23:10:50.6030473Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131198
+2025-08-08T23:10:50.6032745Z     at tryRunOrWebpackError (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:312943)
+2025-08-08T23:10:50.6034890Z     at __webpack_require_module__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+2025-08-08T23:10:50.6037262Z     at __nested_webpack_require_153728__ (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+2025-08-08T23:10:50.6039189Z     at /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454
+2025-08-08T23:10:50.6041016Z     at symbolIterator (/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2025-08-08T23:10:50.6041994Z 
+2025-08-08T23:10:50.6045682Z Generated code for /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!/home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor/app/globals.css
+2025-08-08T23:10:50.6048530Z 
+2025-08-08T23:10:50.6048773Z Import trace for requested module:
+2025-08-08T23:10:50.6049212Z ./app/globals.css
+2025-08-08T23:10:50.6049629Z 
+2025-08-08T23:10:50.6088113Z 
+2025-08-08T23:10:50.6089161Z > Build failed because of webpack errors
+2025-08-08T23:10:50.6246433Z ##[error]Process completed with exit code 1.
+2025-08-08T23:10:50.6383387Z Post job cleanup.
+2025-08-08T23:10:50.7304923Z [command]/usr/bin/git version
+2025-08-08T23:10:50.7340209Z git version 2.50.1
+2025-08-08T23:10:50.7383234Z Temporarily overriding HOME='/home/runner/work/_temp/7e1ff84c-59f7-4434-b96c-1fb94a89d0c2' before making global git config changes
+2025-08-08T23:10:50.7384768Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-08T23:10:50.7389966Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-arbitrage-monitor/stock-arbitrage-monitor
+2025-08-08T23:10:50.7424371Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-08T23:10:50.7457088Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-08T23:10:50.7675336Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-08T23:10:50.7696432Z http.https://github.com/.extraheader
+2025-08-08T23:10:50.7708907Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-08T23:10:50.7738453Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-08T23:10:50.8052280Z Cleaning up orphan processes

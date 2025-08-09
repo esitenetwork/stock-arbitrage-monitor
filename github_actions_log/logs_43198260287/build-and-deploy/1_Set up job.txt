@@ -1,0 +1,39 @@
+﻿2025-08-08T23:05:41.4488017Z Current runner version: '2.327.1'
+2025-08-08T23:05:41.4521671Z ##[group]Runner Image Provisioner
+2025-08-08T23:05:41.4523004Z Hosted Compute Agent
+2025-08-08T23:05:41.4523971Z Version: 20250711.363
+2025-08-08T23:05:41.4525099Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-08-08T23:05:41.4526570Z Build Date: 2025-07-11T20:04:25Z
+2025-08-08T23:05:41.4527566Z ##[endgroup]
+2025-08-08T23:05:41.4528520Z ##[group]Operating System
+2025-08-08T23:05:41.4529484Z Ubuntu
+2025-08-08T23:05:41.4530290Z 24.04.2
+2025-08-08T23:05:41.4531198Z LTS
+2025-08-08T23:05:41.4532114Z ##[endgroup]
+2025-08-08T23:05:41.4533122Z ##[group]Runner Image
+2025-08-08T23:05:41.4534238Z Image: ubuntu-24.04
+2025-08-08T23:05:41.4535154Z Version: 20250804.2.0
+2025-08-08T23:05:41.4537153Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250804.2/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-08T23:05:41.4539877Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250804.2
+2025-08-08T23:05:41.4541946Z ##[endgroup]
+2025-08-08T23:05:41.4543778Z ##[group]GITHUB_TOKEN Permissions
+2025-08-08T23:05:41.4546508Z Contents: read
+2025-08-08T23:05:41.4547645Z Metadata: read
+2025-08-08T23:05:41.4548503Z Packages: read
+2025-08-08T23:05:41.4549341Z ##[endgroup]
+2025-08-08T23:05:41.4552370Z Secret source: Actions
+2025-08-08T23:05:41.4553480Z Prepare workflow directory
+2025-08-08T23:05:41.4982345Z Prepare all required actions
+2025-08-08T23:05:41.5037848Z Getting action download info
+2025-08-08T23:05:41.8304978Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-08-08T23:05:41.8306287Z Version: 4.2.2
+2025-08-08T23:05:41.8307293Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-08-08T23:05:41.8308851Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-08-08T23:05:41.8309646Z ##[endgroup]
+2025-08-08T23:05:41.9006981Z ##[group]Download immutable action package 'actions/setup-node@v4'
+2025-08-08T23:05:41.9007768Z Version: 4.4.0
+2025-08-08T23:05:41.9008557Z Digest: sha256:9427cefe82346e992fb5b949e3569b39d537ae41aa3086483b14eceebfc16bc1
+2025-08-08T23:05:41.9009614Z Source commit SHA: 49933ea5288caeca8642d1e84afbd3f7d6820020
+2025-08-08T23:05:41.9010316Z ##[endgroup]
+2025-08-08T23:05:41.9879996Z Download action repository 'peaceiris/actions-gh-pages@v3' (SHA:373f7f263a76c20808c831209c920827a82a2847)
+2025-08-08T23:05:42.4005700Z Complete job name: build-and-deploy

@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  output: 'export',
   images: {
+    unoptimized: true,
     domains: ['stockx-assets.imgix.net', 'images.stockx.com'],
   },
   trailingSlash: true,
